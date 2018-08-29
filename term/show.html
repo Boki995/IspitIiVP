@@ -1,0 +1,24 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+
+<ul>
+    <li class="term">
+        <a href="{{ BASE }}term/{{ term.term_id }}" class="term-title">
+            {{ term.title|escape }}
+        </a>
+
+        <span class="term-date1">{{ term.starts_at|escape }}</span>
+        <span class="term-date2">{{ term.ends_at|escape }}</span>
+        <span class="term-price">{{ term.price|escape }} &euro;</span>
+
+
+
+
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block naslov %}
+{{ term.name|escape }}
+{% endblock %}

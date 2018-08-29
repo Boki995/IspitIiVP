@@ -1,0 +1,20 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+<div>
+    <div class="options">
+        <a href="{{ BASE }}user/terms/add">Add new term</a>
+    </div>
+
+    <div class="terms">
+        <ul>
+            {% for term in terms %}
+            <li>
+                <a href="{{ BASE }}user/terms/edit/{{ term.term_id }}">
+                    {{ term.name|escape }}
+                </a>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

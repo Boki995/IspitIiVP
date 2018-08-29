@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<title>{% block naslov %}Bazen{% endblock %}</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ BASE }}assets/css/style.css">
+
+</head>
+<body>
+    <header class="site-header">
+        <div class="banners">
+            <a href="{{  BASE  }}" class="banner">
+                    <img src="{{ BASE }}assets/img/banner.jpg" alt="Banner 1">
+            </a>
+        </div>
+        
+        <div class="search-box">
+                <form method="post" action="{{ BASE }}search">
+                    <input type="text" name="q" placeholder="Ključne reči pretrage">
+                    <button type="submit">Search</button>
+                </form>
+        </div>
+        <nav id="main-menu">
+                <ul>
+                    <li><a href="{{ BASE }}">Home</a>
+                    <li><a href="{{ BASE }}terms">Terms</a>
+                    <li><a href="{{ BASE }}profile">Profiles</a>
+                    <li><a href="{{ BASE }}contact">Contact</a>
+                    <li><a href="{{ BASE }}log-out">Log Out</a>
+                </ul>
+         </nav>
+    </header>
+    <main>
+            {% block main %}
+            {% endblock %}
+    </main>
+    <div class="bookmarks">Loading bookmarks...</div>
+
+    <footer class="site-footer">
+            &copy; 2018 - Pool Party by Bojan Milijanovic
+            <div class="social-icons">
+                <a href="#"><img src="{{ BASE }}assets/img/linkedin.png" alt="Li"></a>
+                <a href="#"><img src="{{ BASE }}assets/img/facebook.png" alt="Fb"></a>
+                <a href="#"><img src="{{ BASE }}assets/img/twitter.png" alt="Tw"></a>
+                <a href="#"><img src="{{ BASE }}assets/img/youtube.png" alt="YT"></a>
+
+        </div>
+    </footer>
+    <script>const BASE = '{{ BASE }}';</script>
+        <script src="{{ BASE }}assets/js/script.js"></script>
+
+
+
+
+</body>
+
+
+
+</html>

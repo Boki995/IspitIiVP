@@ -1,0 +1,8 @@
+{% extends "global/index.html" %}
+<h1>{{  reservation.title|escape  }}</h1>
+<p>{{ reservation.description }}</p>
+<p>Cena Termina: {{ termPrice }}</p>
+<p> Pocetak Termina: {{ startOfTerm }} </p>
+<p> Kraj Termina: {{ endOfTerm }} </p>
+
+{% block main %}

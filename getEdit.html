@@ -1,0 +1,23 @@
+{% extends "_global/index.html" %}
+
+{% block main %}
+<div>
+    <div class="options">
+        <a href="{{ BASE }}user/terms">List all terms</a>
+        <a href="{{ BASE }}user/terms/add">Add new term</a>
+    </div>
+
+    <form class="term-form" method="POST">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" id="name" name="name" value="{{ term.name|escape }}">
+        </div>
+
+        <div>
+            <button type="submit">
+                Edit term
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
